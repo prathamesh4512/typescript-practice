@@ -5,15 +5,17 @@ type ReducerState = {
   count: number;
 };
 
-type ReducerAction =
-  | {
-      type: "add";
-      add: number;
-    }
-  | {
-      type: "subtract";
-      subtract: number;
-    };
+type AddAction = {
+  type : "add";
+  add : number;
+}
+
+type SubAction = {
+  type : "subtract";
+  subtract : number;
+}
+
+type ReducerAction = AddAction | SubAction; 
 
 const reducer = (state: ReducerState, action: ReducerAction) => {
   switch (action.type) {
@@ -39,4 +41,4 @@ dispatch({ type: "add" }); // error
 dispatch({ type: "subtract", subtract: "123" }); // error
 
 
-const reducer: Reducer<ReducerState, ReducerAction> = (state, action)
+// const reducer: Reducer<ReducerState, ReducerAction> = (state, action)

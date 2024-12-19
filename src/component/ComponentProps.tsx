@@ -9,7 +9,12 @@ export const Button = ({ className, ...rest }: ComponentProps<"button">) => {
 };
 
 const Parent = () => {
-  return <Button onClick={() => {}} type="button" className="temp"></Button>;
+  return <Button onClick={() => {}} type="button" className="temp" 
+    style={{
+      background:"#f0f0f0"
+    }}
+  
+  ></Button>;
 };
 
 export default Parent;

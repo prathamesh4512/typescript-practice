@@ -1,17 +1,19 @@
 import { ComponentProps } from "react";
 
-// type OverrideProps<T, TOverridden> = Omit<T, keyof TOverridden> & TOverridden;
+type OverrideProps<T, TOverridden> = Omit<T, keyof TOverridden> & TOverridden;
 
-// type InputProps = OverrideProps<
-//   ComponentProps<"input">,
-//   {
-//     onChange: (value: string) => void;
-//   }
-// >;
+type InputProps = OverrideProps<
+  ComponentProps<"input">,
+  {
+    onChange: (value: string) => void;
+    placeholder : "hello"
+  }
+>;
 
-type InputProps = Omit<ComponentProps<"input">,"onChange"> & {
-    onChange: (value: string) => void
- } 
+// type InputProps = Omit<ComponentProps<"input">,"onChange"| "type"> & {
+//     onChange: (value: string) => void,
+//     type: number | string
+//  } 
 
 export const Input = (props: InputProps) => {
   return (
@@ -28,6 +30,7 @@ const Parent = () => {
       onChange={(e) => {
         console.log(e);
       }}
+      placeholder={"hello"}
     ></Input>
   );
 };
