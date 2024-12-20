@@ -84,3 +84,13 @@ function tempLive(x?: number | null) {
 tempLive(0); // "0"
 tempLive(null); // "undefined"
 tempLive(undefined); // "undefined"
+
+
+const arrT = [1,2,3];
+arr.push(1)
+
+// arrT is not const, so to make it work really like const we can write as 
+const arrC = [1,2,3] as const;
+arrC.push(10)   // error
+
+
