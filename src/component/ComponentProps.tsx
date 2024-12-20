@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
 
-// type ButtonProps = ComponentProps<"button">
+// // type ButtonProps = ComponentProps<"button">
 
 export const Button = ({ className, ...rest }: ComponentProps<"button">) => {
   return (
@@ -18,3 +18,17 @@ const Parent = () => {
 };
 
 export default Parent;
+
+
+// type ChildType = {
+//   child: React.ReactNode; // Accepts any renderable JSX
+//  };
+ 
+ 
+//  const Parent = ({ child }: ChildType) => {
+//   return <child></child>;
+//  };
+ 
+ 
+//  // Usage
+//  <Parent child={"div"} />;
