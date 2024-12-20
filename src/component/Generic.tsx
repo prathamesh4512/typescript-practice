@@ -12,7 +12,7 @@ type ListProps<T> = {
   onClick: (value: T) => void;
 };
 
-export const List = <T extends {}>({ items, onClick }: ListProps<T>) => {
+export const List = <T,>({ items, onClick }: ListProps<T>) => {
   return (
     <div>
       <h2>List of items</h2>
@@ -30,12 +30,4 @@ export const List = <T extends {}>({ items, onClick }: ListProps<T>) => {
 <List items={[1, 2]} onClick={() => {}} />;
 <List items={["a", "b"]} onClick={() => {}} />;
 
-
-type AuthUser = {
- name: string;
- email: string;
-}
-
-
-const [user, setUser] = useState<AuthUser | {} >()
 
