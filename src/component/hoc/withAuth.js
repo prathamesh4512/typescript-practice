@@ -8,3 +8,5 @@ const withAuth = (Component) => (props) => {
   </div>
   else return <Login />;
 };
+
+export default withAuth;
