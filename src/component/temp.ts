@@ -91,6 +91,12 @@ arr.push(1)
 
 // arrT is not const, so to make it work really like const we can write as 
 const arrC = [1,2,3] as const;
-arrC.push(10)   // error
+// arrC.push(10)   // error
 
 
+let obj1 = new Map()
+obj1.set("a",10)
+
+for (let [key,value] of obj1){
+
+}

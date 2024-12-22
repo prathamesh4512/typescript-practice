@@ -5,7 +5,6 @@ type UseLocalStorageProps<T> = {
     initialValue: T | (() => T)
 }
 
-
 function useLocalStorage <T>({key,initialValue}: UseLocalStorageProps<T>){
     const [value, setValue] = useState<T>(() => {
         const jsonValue = localStorage.getItem(key)
