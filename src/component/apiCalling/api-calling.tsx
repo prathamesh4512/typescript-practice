@@ -13,7 +13,7 @@ const TempComp = () => {
     fetch("api")
       .then((res) => res)
       .then((res) => res.json())
-      .then((res) => setState(res as StateType[]));
+      .then((res) => setState(res));
 
       axios.get<StateType[]>("api")
       .then(res=>setState(res.data))

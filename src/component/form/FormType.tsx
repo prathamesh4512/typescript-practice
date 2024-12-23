@@ -17,6 +17,18 @@ const FormType = () => {
     const email = formData.get("email");
     const password = formData.get("password");
     console.log({ email, password }); // Safely extracted values
+
+
+    // if more than 2 values, as formData is of Map type 
+    // const formDataObj = Object.fromEntries(formData.entries())
+    // const {email,password, name} = formDataObj
+    // // error handling
+    // for (let [key,value] of formData){
+    //     value = (value as string).trim()
+    //     if(!value){
+    //       setError(prev=>({...prev,key:'Enter value'}))
+    //     }
+    // }
   };
   
 
